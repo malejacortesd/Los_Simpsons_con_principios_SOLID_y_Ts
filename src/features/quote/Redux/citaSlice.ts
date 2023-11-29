@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { AppDispatch, RootState } from "../../app/store";
-import { ESTADO_FETCH } from "./constants";
-import { obtenerCita } from "./citaAPI";
-import { ICita } from "./types";
+import { AppDispatch, RootState } from "../../../app/store";
+import { ESTADO_FETCH } from "../constants";
+import { obtenerCita } from "../citaAPI";
+import { ICita } from "../types";
 
 export interface EstadoCita {
   data: ICita | null;
@@ -14,7 +14,7 @@ const initialState: EstadoCita = {
   estado: ESTADO_FETCH.INACTIVO,
 };
 
-export const obtenerCitaAsync = createAsyncThunk(
+/*export const obtenerCitaAsync = createAsyncThunk(
   "cita/obtenerCita",
   async (personaje: string) => {
     try {
@@ -25,7 +25,12 @@ export const obtenerCitaAsync = createAsyncThunk(
       throw err;
     }
   }
-);
+);*/
+
+export const obtenerCitaAsync = createAsyncThunk('cita/obtenerCita', async (personaje: string) => {
+  const cita = await obtenerCita(personaje);
+  return cita;
+});
 
 export const citaSlice = createSlice({
   name: "citas",

@@ -18,7 +18,7 @@ import {
   TituloNoticias,
   BotonLectura,
   BotonSuscribir,
-  CotenedorTexto,
+  ContenedorTexto,
 } from "./styled";
 
 export interface INoticiasNormalizadas {
@@ -92,7 +92,7 @@ const Noticias = () => {
                   <img src={Close} alt="close-button" />
                 </CloseButton>
                 <ImagenModal src={SuscribeImage} alt="mr-burns-excelent" />
-                <CotenedorTexto>
+                <ContenedorTexto>
                   <TituloModal>Suscríbete a nuestro Newsletter</TituloModal>
                   <DescripcionModal>
                     Suscríbete a nuestro newsletter y recibe noticias de
@@ -108,7 +108,7 @@ const Noticias = () => {
                   >
                     Suscríbete
                   </BotonSuscribir>
-                </CotenedorTexto>
+                </ContenedorTexto>
               </TarjetaModal>
             </ContenedorModal>
           ) : (
@@ -118,10 +118,10 @@ const Noticias = () => {
                   <img src={Close} alt="close-button" />
                 </CloseButton>
                 <ImagenModal src={modal.imagen} alt="news-image" />
-                <CotenedorTexto>
+                <ContenedorTexto>
                   <TituloModal>{modal.titulo}</TituloModal>
                   <DescripcionModal>{modal.descripcion}</DescripcionModal>
-                </CotenedorTexto>
+                </ContenedorTexto>
               </TarjetaModal>
             </ContenedorModal>
           )

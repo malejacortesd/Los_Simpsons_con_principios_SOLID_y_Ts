@@ -1,14 +1,6 @@
-import {
-  ESTADO_FETCH,
-  NOMBRE_INVALIDO,
-  MENSAJE_CARGANDO,
-  NO_ENCONTRADO,
-} from "./constants";
+import {ESTADO_FETCH, NOMBRE_INVALIDO, MENSAJE_CARGANDO, NO_ENCONTRADO} from "./constants";
 
-export const obtenerMensaje: (
-  cita: string,
-  estadoPedido: ESTADO_FETCH
-) => string = (cita, estadoPedido) => {
+export const obtenerMensaje: (cita: string, estadoPedido: ESTADO_FETCH) => string = (cita, estadoPedido) => {
   if (estadoPedido === ESTADO_FETCH.CARGANDO) {
     return MENSAJE_CARGANDO;
   }
