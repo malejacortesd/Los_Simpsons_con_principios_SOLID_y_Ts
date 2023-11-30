@@ -1,7 +1,7 @@
-import ContainerModal from '../ContainerModal';
-import { BotonSuscribir, ContenedorTexto, DescripcionModal, ImagenModal, TituloModal } from '../../styled';
-import { IModalSubscribe } from '../../types';
-import SuscribeImage from '../../assets/suscribe-img.jpg';
+import ContainerModal from '../../ContainerModal';
+import { BotonSuscribir, ContenedorTexto, DescripcionModal, ImagenModal, TituloModal } from '../../../styled';
+import { SuscribeImage } from '../../../../../assets';
+import { IModalSubscribe } from '../../../types';
 
 /**
  * Modal para indicar que el usuario necesita suscribirse para visualizar la noticia
