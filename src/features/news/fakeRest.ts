@@ -10,7 +10,7 @@ export interface INoticias {
 const simularTiempoTranscurrido: (decrementMiliseconds: number) => Date = (
   decrementMiliseconds
 ) => {
-  const time = new Date();
+  let time = new Date();
   time.setMilliseconds(time.getMilliseconds() - decrementMiliseconds);
   return time;
 };
